@@ -1,0 +1,37 @@
+﻿<div ng-controller="createCtrl">
+    <div class="container">
+        <form name="frmEntry" class="form-horizontal">
+            <header class="help-block">
+                Create Student
+            </header>
+            <div class="container">
+                <div class="row">
+                    <section class="col col-lg-3 col-md-12 col-sm-12">
+                        Student Name                       
+                    </section>
+                    <section class="col col-lg-9 col-md-12 col-sm-12">
+                        <label class="input">
+                            <input type="text" class="input" ng-required="true" name="studentName" ng-model="studentName" />                            
+                        </label>
+                        <em ng-show="frmEntry.studentName.$error.required">Please enter this field</em>
+                    </section>
+                </div>
+                <div class="row">
+                    <section class="col col-lg-3 col-md-12 col-sm-12">
+                        Age
+                    </section>
+                    <section class="col col-lg-3 col-md-12 col-sm-12">
+                        <label class="input">
+                            <input type="email" class="input" ng-required name="studentEmail" ng-model="studentEmail" />
+                        </label>
+                        <em ng-show="frmEntry.studentEmail.$invalid">Please a valid email</em>
+                    </section>
+                </div>
+                <footer>
+                    <button class="btn-primary" ng-click="Create()">Create</button>
+                </footer>
+            </div> 
+            {{frmEntry.$valid}}           
+        </form>
+    </div>
+</div>
