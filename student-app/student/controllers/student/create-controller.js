@@ -9,15 +9,27 @@ createControllers.controller('createCtrl', ['$scope', function ($scope) {
 
 }]);
 
+createControllers.directive('uploadFile', function () {
+    return {
+        restrict: 'A',
+        require: '?ngModel',
+        link: function (scope, elm, attr, ctrl) {
 
-function allowDrop(ev) {
-    debugger;
-    var obj = ev.dataTransfer.getData("Files");
-    ev.preventDefault();
-}
-function Drop(ev) {
-    debugger;
+            elm.on('dragover', function (event) {                
+                elm.addClass('drop-area-waiting');
+                event.preventDefault();
+                event.stopPropagation();
+            });           
+           
 
-    ev.preventDefault();
-}
+            elm.on('drop dragleave', function (event) {
+                
+                elm.removeClass('drop-area-waiting');
+                elm.addClass('drop-area');
+                event.preventDefault();
+                event.stopPropagation();
+            });
+        }
+    };
+});
 

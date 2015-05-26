@@ -47,57 +47,46 @@
     padding: 10px;
 }
 
-/*.student-form-content {
+.student-form-content {
     padding: 10px;
-}*/
+}
 
 .student-form-footer {
     background-color: #F0F8FF;
 }
 
-.student-drop-area {
-    background-color: #F5F6CE;
-    width: 220px;
-    border-radius: 10px;
-    vertical-align: middle;
-    text-align: left;
-    border-color: maroon;
-    border: #F1F8E0 2px solid;
+.drop-area {
+    width: 150px;
+    height: 4em;
+    border: 2px solid #DDD;
+    border-radius: 8px;
+    background-color: #DDD;
+    color: black;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    cursor: default;
 }
 
-    .student-drop-area:hover {
-        background-color: #F5F6CE;
-        width: 220px;
-        border-radius: 10px;
-        vertical-align: middle;
-        text-align: left;
-        border-color: maroon;        
-        border: red 10px maroon;
-    }
+.drop-area-waiting {
+    width: 150px;
+    height: 4em;
+    border: 2px solid #DDD;
+    border-radius: 8px;
+    background-color: #DDD;
+    color: black;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    cursor: default;
+    box-shadow:0 0 10px #58FA82;
+
+}
+
 
 
 .student-image {
-    height: 20%;
-    width: 20%;
+    height: 120px;
+    width: 150px;
     float: left;
     position: relative;
     vertical-align: middle;
 }
-
-
-.dropbox1 {
-        width: 100%;
-        height: 5em;
-        border: 2px solid #DDD;
-        border-radius: 8px;
-        background-color: #FEFFEC;
-        text-align: center;
-        color: #BBB;
-        font-size: 1em;
-        font-family: Arial, sans-serif;
-        cursor: default;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }

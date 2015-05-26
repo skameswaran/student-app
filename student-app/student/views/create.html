@@ -60,31 +60,28 @@
                         </div>
                         <div class="col col-lg-3 col-md-12 col-sm-12 col-xs-12" style="z-index:0;">
                             <div class="row">
-                                <section class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                                <section class="col-lg-6 col-md-3 col-sm-12 col-xs-12">
                                     <label>
-                                        <img class="img-thumbnail" src="http://misbbocconiblog.com/wp-content/uploads/2013/02/passport-size.jpg" />
+                                        <img class="img-thumbnail student-image" src="http://misbbocconiblog.com/wp-content/uploads/2013/02/passport-size.jpg" />
                                     </label>
                                 </section>
                             </div>
                             <div class="row">
-                                <div class="dropbox1">
-                                    <span style=" margin-left: -70px !important;margin-top: 15px !important;position: absolute;">INP-Commercial Invoice <br />& Packing List</span>
-                                    <input class="dropbox" id="filePicker" ng-class="dropClass" type="file"
-                                           name="file" ng-model="file" ondragover="allowDrop(event)" ondrop="Drop(event)"
-                                           onchange="angular.element(this).scope().uploadFile(this.files, 'Commercial Invoice & Packing List')"
-                                           style="-moz-opacity: 0;opacity: 0;" />
+                                <div upload-file class="drop-area">
+                                    drop  photo here to change the  picture .. !!!
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <footer class="student-form-footer">
-                    <button class="btn btn-primary" ng-click="Create()">
-                        Create
-                    </button>
-                </footer>
-            </form>
         </div>
+        <footer class="student-form-footer">
+            <button class="btn btn-primary" ng-click="Create()">
+                Create
+            </button>
+        </footer>
+        </form>
     </div>
+</div>
 </div>
 
