@@ -1,4 +1,16 @@
-﻿
+﻿<script type="text/javascript">
+    // getElementById
+    function $id(id) {
+        return document.getElementById(id);
+    }
+
+    //
+    // output information
+    function Output(msg) {
+        var m = $id("messages");
+        m.innerHTML = msg + m.innerHTML;
+    }
+</script>
 <div ng-controller="createCtrl">
 
     <div class="container">
@@ -67,12 +79,10 @@
                                 </section>
                             </div>
                             <div class="row">
-                                <div class="dropbox1">
-                                    <span style=" margin-left: -70px !important;margin-top: 15px !important;position: absolute;">INP-Commercial Invoice <br />& Packing List</span>
-                                    <input class="dropbox" id="filePicker" ng-class="dropClass" type="file"
-                                           name="file" ng-model="file" ondragover="allowDrop(event)" ondrop="Drop(event)"
-                                           onchange="angular.element(this).scope().uploadFile(this.files, 'Commercial Invoice & Packing List')"
-                                           style="-moz-opacity: 0;opacity: 0;" />
+                                <div>
+                                    <label for="fileselect">Files to upload:</label>
+                                    <input type="file" id="fileselect" name="fileselect[]" multiple="multiple" />
+                                    <div id="filedrag">or drop files here</div>
                                 </div>
                             </div>
                         </div>

@@ -1,4 +1,55 @@
-﻿
+﻿<script type="text/javascript">
+
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    // getElementById
+    function $id(id) {
+        return document.getElementById(id);
+    }
+
+    //
+    // output information
+    function Output(msg) {
+        var m = $id("messages");
+        m.innerHTML = msg + m.innerHTML;
+    }
+
+    // call initialization file
+    if (window.File && window.FileList && window.FileReader) {
+        Init();
+    }
+
+    //
+    // initialize
+    function Init() {
+
+        var fileselect = $id("fileselect"),
+            filedrag = $id("filedrag"),
+            submitbutton = $id("submitbutton");
+
+        // file select
+        fileselect.addEventListener("change", FileSelectHandler, false);
+
+        // is XHR2 available?
+        var xhr = new XMLHttpRequest();
+        if (xhr.upload) {
+
+            // file drop
+            filedrag.addEventListener("dragover", FileDragHover, false);
+            filedrag.addEventListener("dragleave", FileDragHover, false);
+            filedrag.addEventListener("drop", FileSelectHandler, false);
+            filedrag.style.display = "block";
+
+            // remove submit button
+            submitbutton.style.display = "none";
+        }
+
+    }
+
+
+</script>
 <div ng-controller="createCtrl">
 
     <div class="container">
@@ -70,7 +121,7 @@
                                 <div class="dropbox1">
                                     <span style=" margin-left: -70px !important;margin-top: 15px !important;position: absolute;">INP-Commercial Invoice <br />& Packing List</span>
                                     <input class="dropbox" id="filePicker" ng-class="dropClass" type="file"
-                                           name="file" ng-model="file" ondragover="allowDrop(event)" ondrop="Drop(event)"
+                                           name="file" ng-model="file" ondragover="allowDrop(event)"  ondrop="alert('dropped');"
                                            onchange="angular.element(this).scope().uploadFile(this.files, 'Commercial Invoice & Packing List')"
                                            style="-moz-opacity: 0;opacity: 0;" />
                                 </div>

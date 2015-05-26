@@ -2,7 +2,7 @@
 
 createControllers.controller('createCtrl', ['$scope', function ($scope) {
 
-    $scope.Create = function () {
+    $scope.Create = function () {        
         if ($scope.frmEntry.$valid)
             alert('Added ' + $scope.studentName);
     };
@@ -12,12 +12,12 @@ createControllers.controller('createCtrl', ['$scope', function ($scope) {
 
 function allowDrop(ev) {
     debugger;
-    var obj = ev.dataTransfer.getData("Files");
+    console.log(ev.dataTransfer.getData("Files"));
     ev.preventDefault();
 }
 function Drop(ev) {
     debugger;
-
+    
     ev.preventDefault();
 }
 

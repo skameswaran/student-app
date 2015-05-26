@@ -65,14 +65,15 @@
     border: #F1F8E0 2px solid;
 }
 
-    .student-drop-area:hover {
+    .student-drop-area:focus {
         background-color: #F5F6CE;
         width: 220px;
         border-radius: 10px;
         vertical-align: middle;
         text-align: left;
-        border-color: maroon;        
-        border: red 10px maroon;
+        border-color: maroon;
+        box-shadow: 0 0 2px #F5A9A9;
+        border: #F1F8E0 2px solid;
     }
 
 
@@ -83,21 +84,3 @@
     position: relative;
     vertical-align: middle;
 }
-
-
-.dropbox1 {
-        width: 100%;
-        height: 5em;
-        border: 2px solid #DDD;
-        border-radius: 8px;
-        background-color: #FEFFEC;
-        text-align: center;
-        color: #BBB;
-        font-size: 1em;
-        font-family: Arial, sans-serif;
-        cursor: default;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
