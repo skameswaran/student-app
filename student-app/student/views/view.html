@@ -1,0 +1,31 @@
+﻿<div ng-controller="viewCtrl">
+    <div class="col col-lg-4 col-md-6 col-sm-6 col-xs-12 student-view-container" ng-repeat="item in profiles">
+        <section class="col col-lg-3 col-md-3 col-sm-3 col-xs-9">
+            <label>
+                <img class="img-thumbnail student-image-view" src="{{item.imageurl}}" />
+            </label>
+        </section>
+        <section class="col col-lg-1 col-md-4 col-sm-3 col-xs-9">
+            <div class="detail container">
+                <section class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <label>
+                        <img src="../../content/images/student.jpg" class="stud-icon" />
+                        <span style="font-weight:600;">{{item.name}}</span>
+                    </label>
+                </section>
+                <section class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <label>
+                        <img src="../../content/images/cotact-small.png" class="stud-icon" />
+                        {{item.contact}}
+                    </label>
+                </section>
+                <section class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <label>
+                        <img src="../../content/images/email.jpg" class="stud-icon" />
+                        {{item.Email}}
+                    </label>
+                </section>
+            </div>
+        </section>
+    </div>
+</div>
