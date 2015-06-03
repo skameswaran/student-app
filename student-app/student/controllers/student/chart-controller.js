@@ -259,7 +259,20 @@ chartControllers.controller('chartCtrl', ['$scope', function ($scope) {
               return height - y(d.PoCount);
           })
             //set width base on range on ordinal data
-          .attr("width", 40);
+          .attr("width", 20);
+
+        bar.append("rect")
+         .attr("y", function (d) {
+             return y(d.PoCount);
+         })
+         .attr("x", function (d, i) {
+             return x.rangeBand() + (margin.left / 4);
+         })
+         .attr("height", function (d) {
+             return height - y(d.PoCount);
+         })
+           //set width base on range on ordinal data
+         .attr("width", 55);
 
         bar.append("text")
           .attr("x", x.rangeBand() + margin.left)

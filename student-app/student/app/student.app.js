@@ -13,7 +13,7 @@ studentApp.config(['$routeProvider', function ($routeProvider) {
             }
         })
         .when('/:dir/:page', {
-            templateUrl: function ($routeParams) {                
+            templateUrl: function ($routeParams) {
                 return '../' + $routeParams.dir + '/views/' + $routeParams.page + '.html';
             }
         })
@@ -22,3 +22,9 @@ studentApp.config(['$routeProvider', function ($routeProvider) {
         });
 
 }]);
+
+studentApp.constant("appConsts", {
+    "jsonurl": "/content/json/student-profiles.json",
+    "gMailurl": "http://www.gmail.com"
+
+});

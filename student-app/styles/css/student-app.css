@@ -118,17 +118,18 @@
         margin-top: -100px;
         margin-left: 100px;
         position: relative;
+        white-space: nowrap;
     }
 }
 
-body {
+/*body {
     overflow-y: scroll;
     overflow-x: hidden;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-image: url("/content/images/student-mangement.jpg");
-}
+}*/
 
 .stud-icon {
     height: 20px;
@@ -153,4 +154,10 @@ body {
     fill: none;
     stroke: #fff;
     shape-rendering: crispEdges;
+}
+
+body {
+    background: #1a1a1a;
+    color: #eaeaea;
+    padding: 10px;
 }
