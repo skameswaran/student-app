@@ -1,5 +1,6 @@
 ﻿
-var studentApp = angular.module('studentApp', ['ngRoute', 'createControllers', 'viewControllers', 'chartControllers', 'studentFactory']);
+var studentApp = angular.module('studentApp', ['ngRoute', 'createControllers', 'viewControllers', 'chartControllers',
+    'studentFactory', 'grpChartControllers']);
 
 studentApp.config(['$routeProvider', function ($routeProvider) {
 
