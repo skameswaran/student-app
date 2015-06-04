@@ -122,21 +122,21 @@
     }
 }
 
-/*body {
+body {
     overflow-y: scroll;
     overflow-x: hidden;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-image: url("/content/images/student-mangement.jpg");
-}*/
+}
 
 .stud-icon {
     height: 20px;
     width: 20px;
 }
 
-#chart rect {
+/*#chart rect {
     fill: #4aaeea;
 }
 
@@ -148,16 +148,20 @@
 
 .axis text {
     font: 10px sans-serif;
-}
+}*/
 
 .axis path, .axis line {
     fill: none;
-    stroke: #fff;
+    stroke: #81DAF5;
     shape-rendering: crispEdges;
 }
 
-body {
+/*.domain {
+    width:1px;
+}*/
+
+/*body {
     background: #1a1a1a;
     color: #eaeaea;
     padding: 10px;
-}
+}*/

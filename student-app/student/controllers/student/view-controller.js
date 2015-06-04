@@ -1,9 +1,9 @@
 ﻿var viewControllers = angular.module('viewControllers', [])
 
-viewControllers.controller('viewCtrl', ['$scope', 'Profiles', 'ProfilesFact', function ($scope, Profiles, ProfilesFact) {
+viewControllers.controller('viewCtrl', ['$scope', 'Profiles', function ($scope, Profiles) {
 
-    $scope.profiles = ProfilesFact.result;
-    debugger;
+    $scope.profiles = Profiles.query();
+    
     $scope.Create = function () {
         if ($scope.frmEntry.$valid)
             alert('Added ' + $scope.studentName);
