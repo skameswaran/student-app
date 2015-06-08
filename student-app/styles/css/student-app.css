@@ -122,14 +122,14 @@
     }
 }
 
-body {
+/*body {
     overflow-y: scroll;
     overflow-x: hidden;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-image: url("/content/images/student-mangement.jpg");
-}
+}*/
 
 .stud-icon {
     height: 20px;
