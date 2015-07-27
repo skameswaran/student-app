@@ -1,4 +1,5 @@
-﻿var createControllers = angular.module('createControllers', [])
+﻿
+var createControllers = angular.module('createControllers', [])
 
 createControllers.controller('createCtrl', ['$scope', function ($scope) {
 
@@ -6,6 +7,8 @@ createControllers.controller('createCtrl', ['$scope', function ($scope) {
         if ($scope.frmEntry.$valid)
             alert('Added ' + $scope.studentName);
     };
+
+    
 
 }]);
 

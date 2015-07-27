@@ -1,0 +1,33 @@
+﻿<div ng-controller="loginmodalCtrl">
+    <div class="modal-header">
+        <h4>Login</h4>
+    </div>
+    <div class="modal-body">
+        <form name="frmLogin">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-lg-3">
+                            <label>Username</label>
+                            <label class="input">
+                                <input type="text" name="username" ng-model="username" ng-required="true" />
+                                <em class="invalid" ng-show="frmLogin.username.$error.required && frmLogin.username.$dirty">user name is required</em>
+                            </label>
+                        </div>
+                        <div class="col-lg-3">
+                            <label>password</label>
+                            <label class="input">
+                                <input type="password" name="password" ng-model="password" ng-required="true" />
+                                <em class="invalid" ng-show="frmLogin.password.$error.required && frmLogin.password.$dirty">password is required</em>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn-primary">Sign In</button>
+        <button class="btn-warning" ng-click="closeLoginPrompt()">Cancel</button>
+    </div>
+</div>
