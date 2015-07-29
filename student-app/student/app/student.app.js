@@ -15,7 +15,7 @@ studentApp.config(['$routeProvider', function ($routeProvider) {
 
     $routeProvider
         .when('/', {
-            redirectTo: '/login'
+            redirectTo: 'student/login'
         })
         .when('/login', {
             templateUrl: function ($routeParams) {

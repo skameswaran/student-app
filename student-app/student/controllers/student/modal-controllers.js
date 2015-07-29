@@ -2,10 +2,9 @@
 modalControllers.controller('loginmodalCtrl', ['$scope', '$location', 'modalProvider',
     function ($scope, $location, modalProvider) {
 
-        $scope.closeLoginPrompt = function () {
+        $scope.authenticate = function () {
             modalProvider.closeModal();
-            window.location.href = '#/student/create';
-
+            $location.path('/student/create');
         };
 
 

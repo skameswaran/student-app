@@ -3,9 +3,7 @@ var loginControllers = angular.module('loginControllers', []);
 loginControllers.controller('getloginCtrl', ['$scope', 'modalProvider', function ($scope, modalProvider) {
 
     $scope.promptLogin = function () {
-        $scope.modalinstace = modalProvider.openModal(
-            '/student/views/GetLoginInfo.html',
-            'lg', false, false);
+        modalProvider.openModal("/student/views/GetLoginInfo.html", "lg", "loginmodalCtrl", false, false);
     }
 
     $scope.checkUserLoggedin = function () {

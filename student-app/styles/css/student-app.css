@@ -1,6 +1,7 @@
 ﻿.invalid {
     color: red;
     float: left;
+    font-weight:lighter;
     position: relative;
     vertical-align: top;
 }
@@ -25,7 +26,16 @@
 
 .state-error {
     background-color: #F5A9A9;
-    box-shadow: 0 0 2px #F5A9A9;
+    box-shadow: 0 0 3px red;
+}
+
+/*.modal-backdrop {
+   background-color: red;
+}*/
+
+.modal-backdrop
+{
+    opacity:0.5 !important;
 }
 
 .state-success {
