@@ -18,7 +18,6 @@ studentFactory.service('modalProvider', ['$modal', function ($modal) {
     }
 
     this.confirmBox = function (message, title) {
-
         return $modal.open({
             templateUrl: "/student/views/confirm-model.html",
             size: 'lg',
@@ -26,7 +25,6 @@ studentFactory.service('modalProvider', ['$modal', function ($modal) {
                 $scope.message = message;
                 $scope.title = title;
                 $scope.ok = function (result) {
-
                     result = true;
                     $modalInstance.close(result);
                 };

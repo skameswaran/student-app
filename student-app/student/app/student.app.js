@@ -9,7 +9,9 @@ var studentApp = angular.module('studentApp', ['ngRoute',
     'multiChartControllers',
     'multiLineCatController',
     'loginControllers',
-    'modalControllers']);
+    'modalControllers',
+    'headerControllers',
+    'authServices']);
 
 studentApp.config(['$routeProvider', function ($routeProvider) {
 

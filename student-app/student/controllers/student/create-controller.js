@@ -7,7 +7,7 @@ createControllers.controller('createCtrl', ['$scope', 'modalProvider', function 
         if ($scope.frmEntry.$valid)
             modalProvider.confirmBox("Are you sure want to add?", "Add Student").then(function (result) {
                 if (result == true) {
-                    alert("done");
+                    
                 }
             });
     };

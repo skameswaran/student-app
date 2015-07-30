@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="studentApp">
 <head>
     <title>Student Management</title>
     <script src="lib/angular/angular.js"></script>
@@ -9,25 +9,33 @@
     <script src="lib/angular/ui-bootstrap-custom-tpls-0.11.0.js"></script>
     <script src="student/controllers/student/chart-controller.js"></script>
     <script src="student/app/student.app.js"></script>
+    <script src="student/controllers/includes/includes.js"></script>
     <script src="student/controllers/student/create-controller.js"></script>
     <script src="student/controllers/student/view-controller.js"></script>
     <script src="student/controllers/student/multiline-chart-controller.js"></script>
     <link href="styles/css/bootstrap.min.css" rel="stylesheet" />
     <script src="student/services/student-services.js"></script>
+    <script src="student/services/auth-service.js"></script>
     <script src="student/controllers/student/login-controller.js"></script>
-    <script src="student/controllers/student/modal-controllers.js"></script>
+    <script src="student/controllers/student/modal-controllers.js"></script>   
     <link href="styles/css/student-app.css" rel="stylesheet" />
     <script src="student/controllers/student/grouped-chart-controller.js"></script>
     <script src="student/controllers/chart/multi-line-catagorial.js"></script>
-
-    <!--<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="http://getbootstrap.com/examples/justified-nav/justified-nav.css" rel="stylesheet">
-
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>-->
 </head>
 <body>
-    <div ng-app="studentApp" ng-view="">
-    </div>
+    <form>
+        <div ng-controller="headerCtrl">
+            <header class="student-common-header">
+                <div ng-include="'includes/header.html'" />
+            </header>
+        </div>
+        <div class="panel-body container">
+            <div class="row" ng-view="">
+            </div>
+        </div>
+        <div>
+            <footer class="panel-footer" ng-controller="footerCtrl">copyright sivasethu @2015</footer>
+        </div>
+    </form>
 </body>
 </html>
