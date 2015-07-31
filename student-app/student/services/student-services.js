@@ -1,13 +1,19 @@
-﻿var studentFactory = angular.module('studentFactory', ['ngResource']);
+﻿var studentFactory = angular.module('studentFactory', ['ngResource', 'ngRoute']);
 
 studentFactory.factory('Profiles', ['$resource', 'appConsts', function ($resource, appConsts) {
     return $resource(appConsts.jsonurl);
 }]);
 
-studentFactory.service('modalProvider', ['$modal', function ($modal) {
+studentFactory.service('modalProvider', ['$modal', '$rootScope', function ($modal,$rootScope) {
     this.modalInstance;
     this.confirminstance;
-    this.openModal = function (urlTemplate, size, controller, backdrop, keyboard) {
+
+    this.openModal = function (urlTemplate, size, controller, backdrop, keyboard, $modalInstance) {
+
+        if ($rootScope.isModalOpen == true) {
+            this.modalInstance.dismiss();
+        }
+
         this.modalInstance = $modal.open({
             templateUrl: urlTemplate,
             size: size,
@@ -15,7 +21,20 @@ studentFactory.service('modalProvider', ['$modal', function ($modal) {
             backdrop: backdrop,
             keyboard: keyboard
         });
+
+        this.modalInstance.opened.then(function () {
+            $rootScope.isModalOpen = true;
+        });
+
+        this.modalInstance.result.then(function (selectedItem) {
+            $rootScope.isModalOpen = false;
+        }, function () {
+            $rootScope.isModalOpen = false;
+        });
+
     }
+
+
 
     this.confirmBox = function (message, title) {
         return $modal.open({

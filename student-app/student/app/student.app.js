@@ -13,7 +13,12 @@ var studentApp = angular.module('studentApp', ['ngRoute',
     'headerControllers',
     'authServices']);
 
-studentApp.config(['$routeProvider', function ($routeProvider) {
+studentApp.run(function ($rootScope) {
+    // you can inject any instance here
+    $rootScope.isModalOpen = false;
+});
+
+studentApp.config(['$routeProvider',  function ($routeProvider) {
 
     $routeProvider
         .when('/', {
@@ -33,6 +38,8 @@ studentApp.config(['$routeProvider', function ($routeProvider) {
 
         });
 
+
+
 }]);
 
 studentApp.constant("appConsts", {
@@ -40,3 +47,5 @@ studentApp.constant("appConsts", {
     "gMailurl": "http://www.gmail.com"
 
 });
+
+var isModalOpen = false;

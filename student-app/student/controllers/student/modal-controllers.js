@@ -3,10 +3,10 @@ modalControllers.controller('loginmodalCtrl', ['$scope', '$location', 'modalProv
 function ($scope, $location, modalProvider, authService) {
 
     $scope.authenticate = function () {
-        authService.setlocalStorage('user', $scope.username);
-        modalProvider.closeModal();
+        authService.setlocalStorage('user', $scope.username);        
         $location.path('/student/create');
+        modalProvider.closeModal();
     };
 
-
 }]);
+

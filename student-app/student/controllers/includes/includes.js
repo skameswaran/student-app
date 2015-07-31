@@ -1,34 +1,34 @@
 ﻿var headerControllers = angular.module('headerControllers', ['ngRoute']);
 
-headerControllers.controller('headerCtrl', ['$scope', '$rootScope', '$location', 'authService',
-    function ($scope, $rootScope, $location, authService) {
+headerControllers.controller('headerCtrl', ['$scope', '$rootScope', '$location', 'authService', 'modalProvider',
+    function ($scope, $rootScope, $location, authService, modalProvider) {
+        $scope.promptLogin = function () {
+            $location.path('/student/login');           
+        }
 
-        
-        $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
-            alert();
-        });
+        $scope.checkUserLoggedin = function () {
 
-        $rootScope.validateLogin = function () {
-
-            if (authService.getlocalStorage() == ""
-                || authService.getlocalStorage() == null
-                || authService.getlocalStorage() == undefined) {
-                $location.path('/student/login');
+            if (authService.getlocalStorage("user") == "" ||
+                authService.getlocalStorage("user") == null ||
+                authService.getlocalStorage("user") == undefined) {
+                $scope.promptLogin();
             }
-        }
+            else {
+                $location.path('/student/create');
+            }
+        };
 
-        $rootScope.logout = function () {
+
+        $scope.logout = function () {
+            debugger;
             authService.removelocalStorage('user');
-        }
+            $location.path('student/logout');
+        };
 
-        $rootScope.validateLogin();
-
+        $scope.checkUserLoggedin();
     }]);
 
-headerControllers.controller('footerCtrl', ['$scope', function ($scope) {
-
-    $scope.userid = 'kamesh';
-    $scope.logout = function () {
-        alert();
-    }
-}]);
+headerControllers.controller('footerCtrl', ['$scope', '$location', 'authService',
+    function ($scope, $location, authService) {
+        authService.validateLogin();
+    }]);

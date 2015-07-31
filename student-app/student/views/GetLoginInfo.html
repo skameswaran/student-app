@@ -1,32 +1,34 @@
-﻿<div ng-controller="loginmodalCtrl" class="col col-lg-12">
-    <div class="modal-header">
-        <h4>Login</h4>
-    </div>
-    <div class="modal-body">
-        <form name="frmLogin">
-            <div class="container">
-                <div class="row">
-                    <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-                            <label>Username</label>
-                            <label class="input">
-                                <input type="text" ng-class="{'state-success':!frmLogin.username.$error.required &&frmLogin.username.$dirty, 'state-error':frmLogin.username.$error.required &&frmLogin.username.$dirty}" name="username" ng-model="username" ng-required="true" />
-                                <em class="invalid" ng-show="frmLogin.username.$error.required && frmLogin.username.$dirty">user name is required</em>
-                            </label>
-                        </div>
-                        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-                            <label>password</label>
-                            <label class="input">
-                                <input type="password" ng-class="{'state-success':!frmLogin.password.$error.required &&frmLogin.password.$dirty, 'state-error':frmLogin.password.$error.required &&frmLogin.password.$dirty}" name="password" ng-model="password" ng-required="true" />
-                                <em class="invalid" ng-show="frmLogin.password.$error.required && frmLogin.password.$dirty">password is required</em>
-                            </label>
+﻿
+    <div ng-controller="loginmodalCtrl" class="col col-lg-12">
+        <div class="modal-header">
+            <h4>Login</h4>
+        </div>
+        <div class="modal-body">
+            <form name="frmLogin">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                <label>Username</label>
+                                <label class="input">
+                                    <input type="text" ng-class="{'state-success':!frmLogin.username.$error.required &&frmLogin.username.$dirty, 'state-error':frmLogin.username.$error.required &&frmLogin.username.$dirty}" name="username" ng-model="username" ng-required="true" />
+                                    <em class="invalid" ng-show="frmLogin.username.$error.required && frmLogin.username.$dirty">user name is required</em>
+                                </label>
+                            </div>
+                            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                <label>password</label>
+                                <label class="input">
+                                    <input type="password" ng-class="{'state-success':!frmLogin.password.$error.required &&frmLogin.password.$dirty, 'state-error':frmLogin.password.$error.required &&frmLogin.password.$dirty}" name="password" ng-model="password" ng-required="true" />
+                                    <em class="invalid" ng-show="frmLogin.password.$error.required && frmLogin.password.$dirty">password is required</em>
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn-default" ng-click="authenticate()" ng-class="{'btn-default':frmLogin.$invalid,'btn-success':frmLogin.$valid}" ng-disabled="frmLogin.$invalid">Sign In</button>
+        </div>
     </div>
-    <div class="modal-footer">
-        <button class="btn-default" ng-click="authenticate()" ng-class="{'btn-default':frmLogin.$invalid,'btn-success':frmLogin.$valid}" ng-disabled="frmLogin.$invalid">Sign In</button>
-    </div>
-</div>
+
