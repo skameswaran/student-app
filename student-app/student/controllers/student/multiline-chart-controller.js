@@ -98,7 +98,7 @@ multiChartControllers.controller('multiChartCtrl', ['$scope', function ($scope) 
         // Create a line
 
         for (var item in data) {
-            debugger;
+            
             var lineGen = d3.svg.line()
                           .x(function (d) {
                               return xScale(d.year);

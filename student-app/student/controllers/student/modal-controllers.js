@@ -1,9 +1,11 @@
 ﻿var modalControllers = angular.module('modalControllers', []);
-modalControllers.controller('loginmodalCtrl', ['$scope', '$location', 'modalProvider', 'authService',
-function ($scope, $location, modalProvider, authService) {
+modalControllers.controller('loginmodalCtrl', ['$scope', '$location', '$rootScope', 'modalProvider', 'authService',
+function ($scope, $location,$rootScope, modalProvider, authService) {
 
     $scope.authenticate = function () {
-        authService.setlocalStorage('user', $scope.username);        
+        authService.setlocalStorage('isLoggedIn', true);
+        authService.setlocalStorage('user', $scope.username);
+        $rootScope.userName = $scope.username;
         $location.path('/student/create');
         modalProvider.closeModal();
     };

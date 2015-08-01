@@ -1,24 +1,41 @@
 ﻿
-var studentApp = angular.module('studentApp', ['ngRoute',
+var studentApp = angular.module('studentApp', ['ngRoute','ngResource',
     'ui.bootstrap',
     'createControllers',
     'viewControllers',
-    'chartControllers',
     'studentFactory',
-    'grpChartControllers',
-    'multiChartControllers',
-    'multiLineCatController',
     'loginControllers',
     'modalControllers',
     'headerControllers',
-    'authServices']);
+    'authServices',
+    'studentDirectives']);
 
-studentApp.run(function ($rootScope) {
-    // you can inject any instance here
+studentApp.run(function ($rootScope, $location, authService) {
+
+    // global variables
     $rootScope.isModalOpen = false;
+    $rootScope.isLoggedIn = false;
+    $rootScope.userName = "";
+
+    $rootScope.$on('$routeChangeSuccess', function (event, next, current) {
+        debugger
+        if (next != undefined) {
+            if (next.params.page.toLowerCase() != "logout" && next.params.page.toLowerCase() != "login") {
+                authService.validateLogin();
+            }
+        }
+    });
+
+    $rootScope.$on('$routeChangeStart', function (event, next, current) {
+
+
+    });
+
 });
 
-studentApp.config(['$routeProvider',  function ($routeProvider) {
+
+
+studentApp.config(['$routeProvider', function ($routeProvider) {
 
     $routeProvider
         .when('/', {

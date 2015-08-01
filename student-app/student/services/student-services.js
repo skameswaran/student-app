@@ -4,7 +4,10 @@ studentFactory.factory('Profiles', ['$resource', 'appConsts', function ($resourc
     return $resource(appConsts.jsonurl);
 }]);
 
-studentFactory.service('modalProvider', ['$modal', '$rootScope', function ($modal,$rootScope) {
+
+
+
+studentFactory.service('modalProvider', ['$modal', '$rootScope', function ($modal, $rootScope) {
     this.modalInstance;
     this.confirminstance;
 

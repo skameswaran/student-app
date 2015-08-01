@@ -64,10 +64,9 @@
 }
 
 .student-common-header {
-    
-    opacity: 0.5;
-    background: red;
-    width: 100%;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #666;
+    border-color: #e5e5e5;
 }
 
 .student-form-content {

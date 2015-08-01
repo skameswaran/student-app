@@ -92,7 +92,7 @@ grpChartControllers.controller('grpChartCtrl', ['$scope', function ($scope) {
             d.Containers = seriesNames.map(function (name) { return { name: name, value: +d[name] }; });
             //alert("hi --- " + JSON.stringify(d.Containers));
         });
-        debugger;
+        
         //alert(JSON.stringify(data));
 
         //x0.domain(data.map(function (d) { return d.State; }));
