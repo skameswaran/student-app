@@ -6,7 +6,7 @@ function ($scope, $location,$rootScope, modalProvider, authService) {
         authService.setlocalStorage('isLoggedIn', true);
         authService.setlocalStorage('user', $scope.username);
         $rootScope.userName = $scope.username;
-        $location.path('/student/create');
+        $location.path('/landing-page');
         modalProvider.closeModal();
     };
 

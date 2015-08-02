@@ -1,5 +1,5 @@
 ﻿
-var studentApp = angular.module('studentApp', ['ngRoute','ngResource',
+var studentApp = angular.module('studentApp', ['ngRoute', 'ngResource',
     'ui.bootstrap',
     'createControllers',
     'viewControllers',
@@ -20,8 +20,10 @@ studentApp.run(function ($rootScope, $location, authService) {
     $rootScope.$on('$routeChangeSuccess', function (event, next, current) {
         debugger
         if (next != undefined) {
-            if (next.params.page.toLowerCase() != "logout" && next.params.page.toLowerCase() != "login") {
-                authService.validateLogin();
+            if (next.params.page != undefined) {
+                if (next.params.page.toLowerCase() != "logout" && next.params.page.toLowerCase() != "login") {
+                    authService.validateLogin();
+                }
             }
         }
     });
@@ -50,6 +52,11 @@ studentApp.config(['$routeProvider', function ($routeProvider) {
             templateUrl: function ($routeParams) {
                 return '../' + $routeParams.dir + '/views/' + $routeParams.page + '.html';
             }
+        })
+        .when('/landing-page', {
+            templateUrl: function ($routeParams) {
+                location.href = "landing-page.html#/student/create";
+            }            
         })
         .otherwise({
 
