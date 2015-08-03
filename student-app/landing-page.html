@@ -37,28 +37,28 @@
 
     <!--directives-->
 
-    <script src="student/directives/student-directives.js"></script>
+    <script src="student/directives/student-directives.js">
+
+    
+    </script>
+    <!--jquery ui-->
+    <script src="lib/jquery-ui/jquery-ui.js"></script>
 
 </head>
-<body>
+<body class="student-view">
     <div class="col-lg-12">
         <div class="row">
             <header class="student-common-header" ng-controller="headerCtrl">
                 <div ng-include="'includes/header.html'" />
             </header>
-        </div>
-        <div class="row">
-            <section class="col-lg-2">
-                <div ng-include="'includes/left-menu.html'" />
-            </section>
-            <section class="col-lg-10">
-                <div class="panel-body container">
-                    <div class="row" ng-view="">
+            <div class="row">                
+                <section class="col-lg-12">
+                    <div>
+                        <div ng-view="">
+                        </div>
                     </div>
-                </div>
-            </section>
-        </div>
-        <div class="row">
+                </section>
+            </div>
             <footer class="panel-footer" ng-controller="footerCtrl">
                 copyright sivasethu @2015
             </footer>

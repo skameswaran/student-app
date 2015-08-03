@@ -17,6 +17,6 @@ loginControllers.controller('logoutCtrl', ['$location',
     function ($location) {
         
         history.go(-(history.length - 1));
-        $location.path('/')       
+        $location.path('#/')       
 
     }]);

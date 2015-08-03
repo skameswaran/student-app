@@ -42,6 +42,7 @@ studentApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         .when('/', {
             redirectTo: 'student/login'
+
         })
         .when('/login', {
             templateUrl: function ($routeParams) {
@@ -62,6 +63,11 @@ studentApp.config(['$routeProvider', function ($routeProvider) {
             templateUrl: function ($routeParams) {
                 location.href = "landing-page.html#/student/create";
             }            
+        })
+        .when('index', {
+            templateUrl: function ($routeParams) {
+                location.href = "index.html#/";
+            }
         })
         .otherwise({
 

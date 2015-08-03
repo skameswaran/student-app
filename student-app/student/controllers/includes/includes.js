@@ -5,16 +5,25 @@ headerControllers.controller('headerCtrl', ['$scope', '$rootScope', '$location',
         authService.validateLogin();
     }]);
 
-headerControllers.controller('menuCtrl', ['$scope', '$location', 'authService',
-    function ($scope, $location, authService) {
+headerControllers.controller('menuCtrl', ['$scope', '$location', 'authService','modalProvider',
+    function ($scope, $location, authService, modalProvider) {
         $scope.menuList = [{
             "name": "Create Student",
             "link": "#/student/create"
         },
-          {
-              "name": "Student View",
-              "link": "#/student/view"
-          }];
+        {
+            "name": "Student View",
+            "link": "#/student/view"
+        }];
+
+        $scope.logout = function () {
+            debugger;
+            modalProvider.confirmBox("Are you sure want to logout?", "Logout?").then(function (result) {
+                if (result == true) {
+                    authService.logout();
+                }
+            });            
+        };
     }]);
 
 headerControllers.controller('footerCtrl', ['$scope', '$location', 'authService',

@@ -21,7 +21,7 @@ function ($compile, $rootScope, authService) {
                         return $compile($("#pop-over-content").html())(scope);
                     }
                 });
-            });            
+            });
 
             scope.closePopUp = function () {
                 $(elements).popover('hide');
@@ -32,6 +32,24 @@ function ($compile, $rootScope, authService) {
                 authService.logout();
             };
 
+        }
+    }
+
+}]);
+
+studentDirectives.directive('accordianMenu', ['$compile', '$rootScope', 'authService',
+function ($compile, $rootScope, authService) {
+
+    return {
+        restrict: 'EAC',
+        templateUrl: "includes/top-menu.html",
+        link: function (scope, elements, attrs) {
+            scope.user = authService.getlocalStorage("user");
+            $(elements).accordion({
+                collapsible: true,
+                active: false,
+                vertical: false
+            });
         }
     }
 

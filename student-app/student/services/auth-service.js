@@ -31,7 +31,7 @@ authServices.service('authService', ['$modal', '$rootScope', '$location', functi
                 || this.getlocalStorage("user") == null
                 || this.getlocalStorage("user") == undefined) {
             $rootScope.isLoggedIn = false;
-            location.href = '#/';
+            location.href = 'index.html#/';
         }
     };
 
@@ -50,7 +50,6 @@ authServices.service('authService', ['$modal', '$rootScope', '$location', functi
         this.removelocalStorage("user");
         this.removelocalStorage("isLoggedIn");
         history.go(-(history.length - 1));
-        $location.path('student/logout');
+        location.href = 'index.html#/';
     };
-
 }]);
