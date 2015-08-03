@@ -4,15 +4,15 @@ var createControllers = angular.module('createControllers', [])
 createControllers.controller('createCtrl', ['$scope', 'modalProvider', function ($scope, modalProvider) {
 
     $scope.Create = function () {
-        
+
         $scope.frmEntry.studentName.$dirty = true;
         $scope.frmEntry.studentEmail.$dirty = true;
         $scope.frmEntry.studentAge.$dirty = true;
         $scope.frmEntry.studentContact.$dirty = true;
         if ($scope.frmEntry.$valid) {
-            
+            modalProvider.messageBox("Student added successfully", "Success !!!", true);
         }
-            
+
     };
 
 

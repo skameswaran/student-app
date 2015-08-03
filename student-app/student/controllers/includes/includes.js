@@ -17,9 +17,11 @@ headerControllers.controller('menuCtrl', ['$scope', '$location', 'authService','
         }];
 
         $scope.logout = function () {
-            debugger;
+            
             modalProvider.confirmBox("Are you sure want to logout?", "Logout?").then(function (result) {
+                
                 if (result == true) {
+                    
                     authService.logout();
                 }
             });            

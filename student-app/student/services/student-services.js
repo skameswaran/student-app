@@ -59,16 +59,17 @@ studentFactory.service('modalProvider', ['$modal', '$rootScope', function ($moda
         }).result;
     };
 
-    this.confirmBox = function (message, title) {
+    this.messageBox = function (message, title, type) {
         return $modal.open({
             templateUrl: "/student/views/message-model.html",
             size: 'lg',
-            controller: function ($scope, $modalInstance) {
+            controller: function ($scope, $modalInstance) {                
+                $scope.type = type;
                 $scope.message = message;
                 $scope.title = title;
                 $scope.ok = function (result) {
                     $modalInstance.dismiss('cancel');
-                };                
+                };
             },
             backdrop: "static",
             keyboard: false
