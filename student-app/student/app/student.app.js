@@ -18,7 +18,7 @@ studentApp.run(function ($rootScope, $location, authService) {
     $rootScope.userName = "";
 
     $rootScope.$on('$routeChangeSuccess', function (event, next, current) {
-        debugger
+        
         if (next != undefined) {
             if (next.params.page != undefined) {
                 if (next.params.page.toLowerCase() != "logout" && next.params.page.toLowerCase() != "login") {
@@ -46,6 +46,11 @@ studentApp.config(['$routeProvider', function ($routeProvider) {
         .when('/login', {
             templateUrl: function ($routeParams) {
                 return '../login.html';
+            }
+        })
+        .when('/logout', {
+            templateUrl: function ($routeParams) {
+                return 'student/logout';
             }
         })
         .when('/:dir/:page', {

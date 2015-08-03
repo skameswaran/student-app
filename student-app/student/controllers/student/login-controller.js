@@ -16,8 +16,8 @@ loginControllers.controller('getloginCtrl', ['$scope', '$rootScope', 'modalProvi
 
 loginControllers.controller('logoutCtrl', ['$location',
     function ($location) {
-
+        
         history.go(-(history.length - 1));
-        $location.path('student/login');
+        $location.path('/')       
 
     }]);
