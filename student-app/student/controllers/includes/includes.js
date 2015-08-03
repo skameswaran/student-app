@@ -2,38 +2,19 @@
 
 headerControllers.controller('headerCtrl', ['$scope', '$rootScope', '$location', 'authService', 'modalProvider',
     function ($scope, $rootScope, $location, authService, modalProvider) {
-        
-        $scope.promptLogin = function () {
-            $location.path('/student/logout');
-        }
+        authService.validateLogin();
+    }]);
 
-        $scope.updateuser = function () {
-            
-            $scope.user = authService.getlocalStorage("user");;
-        }
-
-        $scope.checkUserLoggedin = function () {
-            
-            if (authService.getlocalStorage("user") == "" ||
-                authService.getlocalStorage("user") == null ||
-                authService.getlocalStorage("user") == undefined) {
-                $rootScope.isLoggenin = false;
-                $scope.promptLogin();
-            }
-            else {
-                $rootScope.isLoggenin = true;                
-            }
-        };
-
-
-        $scope.logout = function () {
-            
-            authService.removelocalStorage('user');
-            $rootScope.isLoggenin = false;
-            $location.path('student/logout');
-        };
-
-        $scope.checkUserLoggedin();
+headerControllers.controller('menuCtrl', ['$scope', '$location', 'authService',
+    function ($scope, $location, authService) {
+        $scope.menuList = [{
+            "name": "Create Student",
+            "link": "#/student/create"
+        },
+          {
+              "name": "Student View",
+              "link": "#/student/view"
+          }];
     }]);
 
 headerControllers.controller('footerCtrl', ['$scope', '$location', 'authService',

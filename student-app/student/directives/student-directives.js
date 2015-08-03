@@ -3,7 +3,7 @@ var studentDirectives = angular.module('studentDirectives', []);
 
 
 
-studentDirectives.directive('logOut', ['$compile', '$rootScope', 'authService',
+studentDirectives.directive('accountOptions', ['$compile', '$rootScope', 'authService',
 function ($compile, $rootScope, authService) {
 
     return {

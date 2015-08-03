@@ -6,8 +6,7 @@ loginControllers.controller('getloginCtrl', ['$scope', '$rootScope', 'modalProvi
         if (authService.getlocalStorage("user") == "" ||
                 authService.getlocalStorage("user") == null ||
                 authService.getlocalStorage("user") == undefined) {
-
-            modalProvider.openModal("/student/views/GetLoginInfo.html", "lg", "loginmodalCtrl", "static", false);
+            modalProvider.openModal("/student/views/GetLoginInfo.html", "lg", "loginmodalCtrl", "static", false);            
         }
         else {
             location.href = "landing-page.html#/student/create";
