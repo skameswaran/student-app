@@ -37,7 +37,7 @@ function ($compile, $rootScope, authService) {
 
 }]);
 
-studentDirectives.directive('accordianMenu', ['$compile', '$rootScope', 'authService',
+studentDirectives.directive('topMenu', ['$compile', '$rootScope', 'authService',
 function ($compile, $rootScope, authService) {
 
     return {
@@ -45,10 +45,34 @@ function ($compile, $rootScope, authService) {
         templateUrl: "includes/top-menu.html",
         link: function (scope, elements, attrs) {
             scope.user = authService.getlocalStorage("user");
-            $(elements).accordion({
-                collapsible: true,
-                active: false,
-                vertical: false
+            
+            $(elements).click(function () {
+                $("#topmenu").toggleClass("active");
+            });
+
+            $("#trigger").click(function () {
+                $(elements).toggleClass("active");
+            });
+        }
+    }
+
+}]);
+
+
+studentDirectives.directive('leftMenu', ['$compile', '$rootScope', 'authService',
+function ($compile, $rootScope, authService) {
+
+    return {
+        restrict: 'EAC',
+        templateUrl: "includes/left-menu.html",
+        link: function (scope, elements, attrs) {
+            scope.user = authService.getlocalStorage("user");           
+            $(elements).click(function () {
+                $("#menu").toggleClass("active");
+            });
+
+            $("#trigger").click(function () {
+                $(elements).toggleClass("active");
             });
         }
     }

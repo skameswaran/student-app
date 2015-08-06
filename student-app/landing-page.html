@@ -23,6 +23,7 @@
     <!--css-->
     <link href="styles/css/bootstrap.min.css" rel="stylesheet" />
     <link href="styles/css/student-app.css" rel="stylesheet" />
+    <link href="styles/css/font-awesome.min.css" rel="stylesheet" />
 
     <!--services-->
     <script src="student/services/student-services.js"></script>
@@ -39,30 +40,31 @@
 
     <script src="student/directives/student-directives.js">
 
-    
+
     </script>
     <!--jquery ui-->
     <script src="lib/jquery-ui/jquery-ui.js"></script>
 
 </head>
 <body class="student-view">
-    <div class="col-lg-12">
+    <div class="container">
         <div class="row">
-            <header class="student-common-header" ng-controller="headerCtrl">
+            <div class="row" ng-controller="headerCtrl">
                 <div ng-include="'includes/header.html'" />
-            </header>
-            <div class="row">                
-                <section class="col-lg-12">
-                    <div>
-                        <div ng-view="">
-                        </div>
+            </div>
+            <div class="row">
+                <section class="col">
+                    <div ng-include="'includes/side-menu.html'"></div>
+                </section>
+                <section class="col">
+                    <div ng-view="" style="z-index:0">
                     </div>
                 </section>
             </div>
-            <footer class="panel-footer" ng-controller="footerCtrl">
+            <div class="row" ng-controller="footerCtrl">
                 copyright sivasethu @2015
-            </footer>
-        </div>
-    </div>
+            </div>
+        </div>        
+    </div>    
 </body>
 </html>
