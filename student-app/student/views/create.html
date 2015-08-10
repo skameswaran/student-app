@@ -1,19 +1,19 @@
 ﻿<div class="container" ng-controller="createCtrl">
     <div class="row">
-        <article>
-            <form name="frmEntry"  novalidate style="height:100%;">
-                <header class="student-form-header">
+        <article >
+            <form name="frmEntry" style="border: 1px solid red; " novalidate>
+                <header>
                     Create Student
                 </header>
                 <div class="container">
-                    <div class="student-form-content">
+                    <div>
                         <div class="col col-lg-9 col-md-12 col-sm-12 col-xs-12">
                             <div class="row">
                                 <section class="col col-lg-3 col-md-3 col-sm-12 col-xs-12">
                                     Student Name
                                 </section>
                                 <section class="col col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                                    
+
                                     <label class="input">
                                         <input type="text" class="student-input" ng-class="{'state-success': !frmEntry.studentName.$error.required && frmEntry.studentName.$dirty, 'state-error': frmEntry.studentName.$error.required && frmEntry.studentName.$dirty}" ng-required="true" name="studentName" ng-model="studentName" />
                                     </label>

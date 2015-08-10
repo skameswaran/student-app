@@ -45,13 +45,8 @@ function ($compile, $rootScope, authService) {
         templateUrl: "includes/top-menu.html",
         link: function (scope, elements, attrs) {
             scope.user = authService.getlocalStorage("user");
-            
-            $(elements).click(function () {
-                $("#topmenu").toggleClass("active");
-            });
-
-            $("#trigger").click(function () {
-                $(elements).toggleClass("active");
+            elements.on('click', function () {
+                $("#topMenu").toggleClass("active");
             });
         }
     }
@@ -66,13 +61,9 @@ function ($compile, $rootScope, authService) {
         restrict: 'EAC',
         templateUrl: "includes/left-menu.html",
         link: function (scope, elements, attrs) {
-            scope.user = authService.getlocalStorage("user");           
-            $(elements).click(function () {
-                $("#menu").toggleClass("active");
-            });
-
-            $("#trigger").click(function () {
-                $(elements).toggleClass("active");
+            scope.user = authService.getlocalStorage("user");
+            elements.on('click', function () {
+                $("#leftmenu").toggleClass("active");
             });
         }
     }

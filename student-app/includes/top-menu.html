@@ -1,26 +1,14 @@
-﻿<div align="right"><button class="btn-success">Welcome {{user}}</button></div>
-<div id="topmenu" ng-controller="menuCtrl">
-    <ul >
-        <li ng-repeat="item in menuList">
-            <a href={{item.link}}>{{item.name}}</a>
-        </li>
-        <li>
-            <a ng-click="logout()">logout</a>
-        </li>
-    </ul>
+﻿<div class="container" ng-controller="menuCtrl">
+    <div id="topMenu" class="hidden-md hidden-lg">
+        <ul class="nav nav-pills">
+            <li ng-repeat="item in menuList">
+                <a href={{item.link}}>
+                    {{item.name}}
+                </a>
+            </li>
+            <li>
+                <a ng-click="logout()">logout</a>
+            </li>
+        </ul>
+    </div>
 </div>
-<script>
-    $("#trigger").click(function () {
-        $("#topmenu").toggleClass("active");
-    });
-
-    $("#trigger").click(function () {
-        $("#trigger").toggleClass("active");
-    });
-</script>
-
-
-
-
-
-

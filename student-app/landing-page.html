@@ -49,22 +49,22 @@
 <body class="student-view">
     <div class="container">
         <div class="row">
-            <div class="row" ng-controller="headerCtrl">
+            <div ng-controller="headerCtrl">
                 <div ng-include="'includes/header.html'" />
             </div>
             <div class="row">
-                <section class="col">
+                <section>
                     <div ng-include="'includes/side-menu.html'"></div>
                 </section>
-                <section class="col">
-                    <div ng-view="" style="z-index:0">
+                <section class="container">
+                    <div ng-view="" style="height:80vh;border:1px solid blue;margin:2%;">
                     </div>
                 </section>
             </div>
             <div class="row" ng-controller="footerCtrl">
                 copyright sivasethu @2015
             </div>
-        </div>        
-    </div>    
+        </div>
+    </div>
 </body>
 </html>

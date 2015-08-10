@@ -1,9 +1,9 @@
-﻿<button id="trigger" class="hidden-xs hidden-sm">menu</button>
-
-<div id="menu" class="hidden-sm" ng-controller="menuCtrl">
-    <ul class="nav nav-tabs">
+﻿<div id="leftmenu" class="hidden-xs hidden-sm" ng-controller="menuCtrl">
+    <ul class="nav nav-stacked">
         <li ng-repeat="item in menuList">
-            <a href={{item.link}}>{{item.name}}</a>
+            <a href={{item.link}}>
+                {{item.name}}
+            </a>
         </li>
         <li>
             <a ng-click="logout()">logout</a>
@@ -12,14 +12,4 @@
 </div>
 
 
-<script>
-    $("#trigger").click(function () {        
-        $("#trigger").toggleClass("active");
-        $("#menu").toggleClass("active");        
-    });
 
-    $("#trigger").click(function () {
-        $("#menu").toggleClass("active");
-        
-    });
-</script>
