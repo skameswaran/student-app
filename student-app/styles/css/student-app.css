@@ -156,59 +156,41 @@
     shape-rendering: crispEdges;
 }
 
-
-/* left  menu */
-
-#leftmenu {
-    background: #F0F8FF;
-    white-space: nowrap; 
-    overflow: hidden;    
-    position: absolute;
-    width: 15%;
-    height: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-    z-index: 10;
-    transform: translate( -90%,-0px);
-    transition: cubic-bezier() 0.5s ease-in-out;
-}
-    #leftmenu li a:hover {
-        color:black;
-        opacity: 1;
-        text-decoration: underline;
-        font-weight:bold;
-        cursor:pointer;
-    }
-
-    #leftmenu.active {
-        -webkit-transform: translate(0%, -7px);
-        transform: translate(-10%, 0px);
-    }
-
-
-/* top  menu */
-
-#topMenu {
-    background: #F0F8FF;
-    position: absolute;
-    white-space: nowrap; 
-    overflow: hidden;    
-    width: 100%;
-    height: 15%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-    z-index: 10;
-    transform: translate(-2%,-90%);
-    transition: all 0.5s ease-in-out;
+.header-menu {
+    transition: all .2s ease-in-out;
 }
 
- #topMenu li a:hover {
-        color:black;
-        opacity: 1;
-        text-decoration: underline;
-        font-weight:bold;
-        cursor:pointer;
+    .header-menu:hover {
+        transform: scale(1.2);
     }
 
-    #topMenu.active {
-        -webkit-transform: translate(0%,7px);
-        transform: translate(-2%,1%);
+#leftMenu {
+        background: #F0F8FF;
+        white-space: nowrap;
+        overflow: hidden;
+        position: absolute;
+        width: 15%;
+        height: 100%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        z-index: 10;
+        transform: translate( -130%,-0px);
+        transition: cubic-bezier() 0.5s ease-in-out;
+        -moz-transform: translate( 100px,200px);
+        -moz-transition: 0.5s ease-in-out;
     }
+
+        #leftMenu li a:hover {
+            color: black;
+            opacity: 1;
+            text-decoration: underline;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #leftMenu.activa {
+            transform: translate(-35%, -7px);
+            -moz-transform: translate(100px, 100px);
+            background-color:red;
+        }
+
+   

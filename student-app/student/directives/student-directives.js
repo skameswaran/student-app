@@ -63,7 +63,8 @@ function ($compile, $rootScope, authService) {
         link: function (scope, elements, attrs) {
             scope.user = authService.getlocalStorage("user");
             elements.on('click', function () {
-                $("#leftmenu").toggleClass("active");
+                debugger; 
+                $("#leftMenu").toggleClass("activa");
             });
         }
     }
