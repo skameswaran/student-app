@@ -1,17 +1,28 @@
 ﻿
-<div id="leftMenu" ng-controller="menuCtrl" class="hidden-xs hidden-sm" >
-    <ul class="nav nav-stacked">
-        <li ng-repeat="item in menuList">
-            <a href={{item.link}}>
-                {{item.name}}
-            </a>
-        </li>
-        <li>
-            <a ng-click="logout()">logout</a>
-        </li>
-    </ul>
-    
+
+<div id="leftMenu" class="row hidden-xs hidden-sm" ng-controller="menuCtrl">
+    <table style="height:100%;">
+        <tr style="vertical-align:top;">
+            <td style="width:90%;">
+                <ul class="nav nav-stacked">
+                    <li ng-repeat="item in menuList">
+                        <a href={{item.link}}>
+                            {{item.name}}
+                        </a>
+                    </li>
+                    <li>
+                        <a ng-click="logout()">logout</a>
+                    </li>
+                </ul>
+            </td>
+            <td align="left" style="background-color:#0094ff;height:100%;vertical-align:middle;">
+                <label style="transform:rotate(90deg)">Menu</label>
+            </td>
+        </tr>
+    </table>
+
 </div>
+
 
 
 

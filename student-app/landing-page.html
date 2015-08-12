@@ -46,24 +46,19 @@
     <script src="lib/jquery-ui/jquery-ui.js"></script>
 
 </head>
-<body class="student-view">
-    <div class="container">
+<body class="container">
+    <div class="row">
+        <div ng-controller="headerCtrl">
+            <div ng-include="'includes/header.html'" />
+        </div>
         <div class="row">
-            <div ng-controller="headerCtrl">
-                <div ng-include="'includes/header.html'" />
-            </div>
-            <div class="row">
-                <section>
-                    <div ng-include="'includes/side-menu.html'"></div>
-                </section>
-                <section class="container">
-                    <div ng-view="" style="height:80vh;border:1px solid blue;margin:2%;">
-                    </div>
-                </section>
-            </div>
-            <div class="row" ng-controller="footerCtrl">
-                copyright sivasethu @2015
-            </div>
+            <section>
+                <div ng-include="'includes/side-menu.html'"></div>
+            </section>
+            <section>
+                <div ng-view="" class="student-view">
+                </div>
+            </section>
         </div>
     </div>
 </body>

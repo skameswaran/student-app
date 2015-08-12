@@ -1,12 +1,12 @@
 ﻿<div class="container" ng-controller="createCtrl">
     <div class="row">
-        <article >
-            <form name="frmEntry" style="border: 1px solid red; " novalidate>
-                <header>
+        <article>
+            <form name="frmEntry" novalidate class="student-form">
+                <header class="student-form-header">
                     Create Student
                 </header>
-                <div class="container">
-                    <div>
+                <div class="student-form-container">
+                    <div class="row">
                         <div class="col col-lg-9 col-md-12 col-sm-12 col-xs-12">
                             <div class="row">
                                 <section class="col col-lg-3 col-md-3 col-sm-12 col-xs-12">
@@ -73,8 +73,8 @@
                         </div>
                     </div>
                 </div>
-                <footer class="student-form-footer">
-                    <button class="btn btn-primary" ng-click="Create()">
+                <footer style="vertical-align:bottom;">
+                    <button  class="btn btn-primary" ng-click="Create()">
                         Create
                     </button>
                 </footer>
