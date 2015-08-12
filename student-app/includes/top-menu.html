@@ -1,47 +1,14 @@
-﻿
-<style type="text/css">    
-    #topMenu {
-        background: #F0F8FF;
-        position: absolute;
-        white-space: nowrap;
-        overflow: hidden;
-        width: 100%;
-        height: 15%;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-        z-index: 10;
-        transform: translate(-2%,-90%);
-        transition: all 0.5s ease-in-out;
-    }
-
-        #topMenu li a:hover {
-            color: black;
-            opacity: 1;
-            text-decoration: underline;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        #topMenu.active {
-            transform: translate(-2%,1%);
-        }
-</style>
-
-<div class="container" ng-controller="menuCtrl">
+﻿<div class="hidden-lg hidden-md" ng-controller="menuCtrl">
     <div id="topMenu">
         <ul class="nav nav-tabs">
-            <li>
-                <a href="#/student/create">
-                    <img class="header-menu" title="Add Student" src="../content/images/add-student.jpg" />
+            <li ng-repeat="item in menuList">
+                <a href={{item.link}}>
+                    {{item.name}}
                 </a>
             </li>
-            <li class="divider"></li>
             <li>
-                <a href="#/student/view">
-                    <img class="header-menu" title="View Student" src="../content/images/view-student.png" />
-                </a>
+                <a ng-click="logout()">logout</a>
             </li>
-            <li class="divider"></li>
-
         </ul>
     </div>
 </div>

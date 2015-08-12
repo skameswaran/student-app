@@ -64,7 +64,7 @@ function ($compile, $rootScope, authService) {
             scope.user = authService.getlocalStorage("user");
             elements.on('click', function () {
                 debugger; 
-                $("#leftMenu").toggleClass("activa");
+                $("#leftMenu").toggleClass("active");
             });
         }
     }

@@ -1,6 +1,5 @@
-﻿<link type="text/css" href="/styles/css/student-app.css" rel="stylesheet" />
-
-<div id="leftMenu" ng-controller="menuCtrl">
+﻿
+<div id="leftMenu" ng-controller="menuCtrl" class="hidden-xs hidden-sm" >
     <ul class="nav nav-stacked">
         <li ng-repeat="item in menuList">
             <a href={{item.link}}>
@@ -11,6 +10,7 @@
             <a ng-click="logout()">logout</a>
         </li>
     </ul>
+    
 </div>
 
 
