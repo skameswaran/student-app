@@ -1,13 +1,15 @@
-﻿<div class="hidden-lg hidden-md" ng-controller="menuCtrl">
+﻿<div class="hidden-lg" ng-controller="menuCtrl">
     <div id="topMenu">
-        <ul class="nav nav-tabs">
-            <li ng-repeat="item in menuList">
+        <ul>
+            <li ng-repeat="item in menuList" style="display: inline;">
                 <a href={{item.link}}>
                     {{item.name}}
                 </a>
             </li>
             <li>
-                <a ng-click="logout()">logout</a>
+                <a ng-click="logout()" style="display: inline;">
+                    logout
+                </a>
             </li>
         </ul>
     </div>

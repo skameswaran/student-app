@@ -52,16 +52,20 @@
     font-size: large;
     vertical-align: middle;
     text-align: center;
+    width:100%;
 }
 
 .student-form {
-    margin-left: -5%;
+    left:25%;
+    right:25%;
+    bottom:10%;
+    top:10%;
     margin-top: 1%;
     margin-right: -5%;
+    width:100%;
     border: 1px solid #81DAF5;
-    border-radius: 1.9em;
-    height: 96vh;
-    
+    border-top-left-radius: 1.9em;
+    border-top-right-radius: 1.9em;
 }
 
 .student-form-container {    
@@ -72,6 +76,7 @@
     height:95vh;
     padding-left: -1%;
     width: 100%;
+    left:25%;
 }
 
 @media screen and (min-width:767px) {
@@ -93,6 +98,8 @@
 
 .student-form-footer {
     background-color: #F0F8FF;
+    padding:2px;
+    align-content:space-around;
 }
 
 .student-footer {
@@ -111,6 +118,7 @@
     font-size: 12px;
     font-family: Arial, sans-serif;
     cursor: default;
+    margin:5px;
 }
 
 .drop-area-waiting {
@@ -132,8 +140,8 @@
     .student-image-view {
         height: 100px;
         width: 100px;
-        vertical-align: middle;
-        background-repeat: no-repeat;
+        vertical-align: middle;  
+        position:relative;      
     }
 }
 
@@ -184,6 +192,7 @@
 
 
 #topMenu {
+    top:2%;
     background: #F0F8FF;
     position: absolute;
     white-space: nowrap;
@@ -202,6 +211,7 @@
         text-decoration: underline;
         font-weight: bold;
         cursor: pointer;
+        top:100px;
     }
 
     #topMenu.active {
@@ -219,10 +229,11 @@
     height: 100%;
     box-shadow: 0 4px 6px 5px rgba(0, 0, 0, 1);
     z-index: 10;
-    -webkit-transform: translate(-115%,0%);
+    -webkit-transform: translate(-110%,0%);
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transform: translate(-115%,0%);
     -moz-transition: all 0.5s ease-in-out;
+    left:5%;
 }
 
     #leftMenu li a:hover {
@@ -235,5 +246,5 @@
 
     #leftMenu.active {
         -moz-transform: translate(-30%,0%);
-        -webkit-transform: translate(-30%,0%);
+        -webkit-transform: translate(-20%,0%);
     }
