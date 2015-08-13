@@ -1,16 +1,19 @@
-﻿<div class="hidden-lg" ng-controller="menuCtrl">
-    <div id="topMenu">
+﻿<div id="topMenu" class="hidden-lg" ng-controller="menuCtrl">
+    <div style="height:80%;width:100%;">
         <ul>
-            <li ng-repeat="item in menuList" style="display: inline;">
+            <li ng-repeat="item in menuList">
                 <a href={{item.link}}>
                     {{item.name}}
                 </a>
             </li>
             <li>
-                <a ng-click="logout()" style="display: inline;">
+                <a ng-click="logout()">
                     logout
                 </a>
             </li>
         </ul>
+    </div>
+    <div style="background-color:#0094ff;vertical-align:middle;text-align:center;">
+        <label>Menu</label>
     </div>
 </div>

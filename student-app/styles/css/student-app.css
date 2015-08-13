@@ -52,31 +52,31 @@
     font-size: large;
     vertical-align: middle;
     text-align: center;
-    width:100%;
+    width: 100%;
 }
 
 .student-form {
-    left:25%;
-    right:25%;
-    bottom:10%;
-    top:10%;
+    left: 35%;
+    right: 25%;
+    bottom: 10%;
+    top: 10%;
     margin-top: 1%;
     margin-right: -5%;
-    width:100%;
+    width: 100%;
     border: 1px solid #81DAF5;
     border-top-left-radius: 1.9em;
     border-top-right-radius: 1.9em;
 }
 
-.student-form-container {    
+.student-form-container {
     padding: 10px;
 }
 
 .student-view {
-    height:95vh;
+    height: 95vh;
     padding-left: -1%;
     width: 100%;
-    left:25%;
+    left: 25%;
 }
 
 @media screen and (min-width:767px) {
@@ -98,8 +98,8 @@
 
 .student-form-footer {
     background-color: #F0F8FF;
-    padding:2px;
-    align-content:space-around;
+    padding: 2px;
+    align-content: space-around;
 }
 
 .student-footer {
@@ -118,7 +118,7 @@
     font-size: 12px;
     font-family: Arial, sans-serif;
     cursor: default;
-    margin:5px;
+    margin: 5px;
 }
 
 .drop-area-waiting {
@@ -140,8 +140,8 @@
     .student-image-view {
         height: 100px;
         width: 100px;
-        vertical-align: middle;  
-        position:relative;      
+        vertical-align: middle;
+        position: relative;
     }
 }
 
@@ -192,7 +192,7 @@
 
 
 #topMenu {
-    top:2%;
+    top: 2%;
     background: #F0F8FF;
     position: absolute;
     white-space: nowrap;
@@ -203,16 +203,24 @@
     z-index: 10;
     transform: translate(-2%,-90%);
     transition: all 0.5s ease-in-out;
+    
 }
 
-    #topMenu li a:hover {
-        color: black;
-        opacity: 1;
-        text-decoration: underline;
-        font-weight: bold;
-        cursor: pointer;
-        top:100px;
+    #topMenu li {
+        display: inline;
+        background-color: #F0F8FF;
     }
+
+        #topMenu li a:hover {
+            color: black;
+            opacity: 1;
+            text-decoration: underline;
+            font-weight: bold;
+            cursor: pointer;
+            top: 100px;
+            text-decoration:underline;
+            background:#DDD;
+        }
 
     #topMenu.active {
         transform: translate(-2%,1%);
@@ -233,7 +241,7 @@
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transform: translate(-115%,0%);
     -moz-transition: all 0.5s ease-in-out;
-    left:5%;
+    left: 5%;
 }
 
     #leftMenu li a:hover {
